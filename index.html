@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head lang="es">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Desafio de encriptado</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="notificacion">
+            <label>Texto copiado con exito!</label>
+        </div>
+        <div id="main">
+            <img src="Muñeco.png" alt="imagen modelo del proyecto en alura">
+            <label id="pantalla">Ingrese el texto que desea encriptar o desemcriptar</label>
+            <textarea id="encriptador" placeholder="Ingrese aquí las palabras para encriptar"></textarea>
+            <input type="submit" id="encrip" class="btn" value="">
+            <fieldset>
+                <label for="encriptar" class="radio">Encriptar:</label>
+                <input type="radio" id="encriptar" name="opcion" value="encrip" checked/>
+                <label for="desencriptar" class="radio">Desencriptar:</label>
+                <input type="radio" id="desencriptar" name="opcion" value="desencrip">
+            </fieldset>
+            <button id="copy">Copiar texto</button>
+        </div>
+        <script src="procesos.js"></script>
+    </body>
+</html>

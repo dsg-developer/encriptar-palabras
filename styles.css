@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: -moz-linear-gradient(to right bottom, rgb(9, 95, 196) 26%, rgb(212, 65, 143));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    clear: right;
+}
+
+#main{
+    width: 30%;
+    margin: auto;
+    margin-top: 250px;
+    border: 1px solid black;
+    background-color: rgb(222, 235, 248);
+    border-radius: 20px;
+    display: block;
+    clear: right;
+}
+
+#main img{
+    width: 38%;
+    height: 230px;
+    display: block;
+    position: relative;
+    top: -190px;
+    left: 31%;
+}
+
+#main #pantalla{
+    width: 86%;
+    display: block;
+    margin: auto;
+    border: 2px dotted rgb(120, 140, 195);
+    border-radius: 7px;
+    margin-top: -36%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    box-sizing: border-box;
+    text-align: center;
+    color: rgb(120, 140, 195);
+    height: 220px;
+    font-family: "Time New Roman", bold;
+    font-size: 18px;
+    background-color: rgb(210, 220, 230, 0.3);
+}
+
+#main textarea{
+    border-radius: 7px;
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 67%;
+    border: 1px solid rgb(120, 140, 195);
+    padding: 2%;
+    font-family: "Time New Roman";
+    display: inline-block;
+}
+
+.btn{
+    width: 6%;
+    height: 36px;
+    display: inline-block;
+    background: url('sent.png');
+    background-size: 27px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px dotted rgb(110, 130, 185);
+    border-radius: 50%;
+    position: relative;
+    top: -31px;
+    margin-left: 12px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(120, 150, 212);
+}
+
+fieldset{
+    margin-top: -4px;
+    padding: 0px 10px;
+    border: 0;
+}
+
+.radio{
+    position: relative;
+    left: 28%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+fieldset input{
+    position: relative;
+    left: 28%;
+    margin-right: 4%;
+    cursor: pointer;
+}
+
+#main button{
+    background-color: rgb(75, 190, 226);
+    display: block;
+    width: 26%;
+    height: 36px;
+    color: white;
+    font-family: "Time New Roman";
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 21px;
+    border: 0px solid black;
+    border-radius: 5px;
+    position: relative;
+    left: 71%;
+    transition: 0.1s all;
+}
+
+#main button:active{
+    transform: scale(1.0);
+    pointer-events: none;
+    background-color: rgb(75, 155, 195);
+}
+
+#main button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#notificacion{
+    width: 26%;
+    height: 82px;
+    position: fixed;
+    bottom: -80px;
+    right: 10px;
+    background-color: aliceblue;
+    border-radius: 36px;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    justify-content: center;
+}
+
+#notificacion label{
+    position: relative;
+    top: 32%;
+    font-family: "Time New Roman", bold;
+    font-size: 16px;
+    color: rgb(50, 220, 195);
+    width: 70%;
+    text-align: center;
+}
+
+#notificacion label:hover{
+    cursor: pointer;
+}
+
+#notificacion:hover{
+    cursor: pointer;
+}
+
+.animacion-entrada{
+    visibility: visible;
+    animation: abrirNotificacion 1.4s forwards;
+}
+
+.animacion-salida{
+    visibility: visible;
+    opacity: 1;
+    animation: cerrarNotificacion 2.1s; /*la palabra forwards es para que la animacion se quede donde termina*/
+}
+
+@keyframes abrirNotificacion{
+    from{
+        bottom: 3px;
+    }
+    to{
+        visibility: visible;
+        bottom: 10px;
+        opacity: 0.8;
+    }
+}
+
+@keyframes cerrarNotificacion{
+    from{
+        transform: scale(0.5);
+    }
+    to{
+        transform: scale(0.5);
+        right: 100px;
+    }
+}
